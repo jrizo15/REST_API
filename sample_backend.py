@@ -67,6 +67,7 @@ def get_users():
                     users['users_list'].remove(user)
                     resp = jsonify(success=True)
                     return resp
+            return jsonify(success=False)
 
 @app.route('/users/<id>')
 def get_user(id):
